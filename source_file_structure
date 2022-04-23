@@ -1,0 +1,133 @@
+/* Java Source File Structure
+Last Updated : 01 Dec, 2021
+Java source file structure describes that the Java source code file must follow a schema or structure. In this article, we will see some of the 
+important guidelines that a Java program must follow.   
+
+ A Java program has the following structure:
+
+ 1. package statements: A package in Java is a mechanism to encapsulate a group of classes, sub-packages, and interfaces.
+
+ 2. import statements: The import statement is used to import a package, class, or interface.
+
+ 3. class definition: A class is a user-defined blueprint or prototype from which objects are created, and it is a passive entity.
+
+Important Points to keep in mind while working with Java Source File
+Below are the points that we should keep in our mind while working with Java:
+
+1.  Number of classes in a Java source file:
+
+A Java program can contain any number of classes, and at most, one of them can be declared as a public class.
+
+Explanation:  Java allows us to create any number of classes in a program. But out of all the classes, at most, one of them can be declared as a public class. 
+In simple words, the program can contain either zero public class, or if there is a public class present, it cannot be more than one.
+
+The correctness proof of the statement: Let us create a program in our local IDE and compile it with the help of the Javac compiler. 
+
+For example, In the below program, we have created three empty classes (Geeks, Learning, and Programming).
+
+Source Code:
+
+// Declaring classes
+class Geeks {
+  
+}
+  
+class Learning {
+  
+}
+  
+class Programming {
+  
+}
+We have saved the above java source file with the name GeeksforGeeks.java.
+
+
+Fig 1: File Name
+
+Let us now compile the program with the help of the javac compiler through the command prompt:
+
+javac GeeksforGeeks.java
+Output:
+
+
+Fig 2: Compiler Verdict
+
+The program compiles successfully without any errors, and corresponding .class files are generated.
+
+2.  Name of the Java source file:
+
+The name of the Java source file can be anything provided that no class is declared as public.
+
+Explanation:  Java allows us to name the Java source file with anything if there is not a single class that is declared as public.
+But if there is a class that is declared as public, the name of the Java source file must be the same as the public class name. 
+The Java source file extension must be .java.
+
+The correctness proof of the statement: In statement 1 (please refer to fig 2), we have already seen that the Java source file name can be anything 
+if none of the classes is declared public.
+
+Now we will check whether our program compiles successfully or not if we declare one of the classes as public.
+
+For example, In the below program, we have created three empty classes (Geeks, Learning, and Programming), and exactly one of them is a public class(Geeks).
+
+Source Code:
+
+// Declaring classes
+  
+// Declared as public
+public class Geeks {
+    
+}
+  
+class Learning {
+    
+}
+  
+class Programming {
+    
+}
+We have saved the above java source file with the name GeeksforGeeks.java.
+
+
+Fig 3: File Name
+
+Let us now compile the program with the help of the javac compiler through the command prompt:
+
+Output:
+
+
+fig 4: Compiler Verdict
+
+We get the compilation error. Compiler asks to save the Java source file name with Geeks.java only as Geeks class is declared as public. 
+
+
+fig 5: File Name
+
+Let us now compile the program with the help of the javac compiler through the command prompt again:
+
+javac Geeks.java
+Output:
+
+
+fig 6: Compiler Verdict
+
+This time program compiles successfully without any errors.
+
+3.  Number of .class files in a Java source file:
+
+The number of .class files generated is equal to the number of classes declared in the Java program.
+
+Explanation: While compiling a program, the javac compiler generates as many .class files as there are classes declared in the Java source file. 
+
+Syntax of generated .class files: 
+
+class_name.class: class_name is name of the class that is present in the Java source file.
+The .class file contains Java byte code and is later executed by the JVM(Java Virtual Machine). 
+The Java interpreter (JVM) knows where the class files for the standard system classes are located and can load them as needed.   
+
+The correctness proof of the statement: Let us create a program in our local IDE and compile it with the help of the Javac compiler. 
+
+Now we will check whether the number of .class files (byte code) generated is the same as the number of classes declared in the Java source file.
+
+For example, In the below program, we have created three empty classes (GeeksforGeeks, Programming, and Coding).
+
+Source Code:
